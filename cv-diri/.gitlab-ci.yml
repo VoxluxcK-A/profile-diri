@@ -1,0 +1,13 @@
+pages:
+  stage: deploy
+  image: node:24
+  script:
+    - cdd cv-diri
+    - npm install
+    - npm run build
+    - mv dist ../public
+  artifacts:
+    paths:
+      - public
+  rules
+    - if: '$CI_COMMIT_BRANCH == "deployment"'
