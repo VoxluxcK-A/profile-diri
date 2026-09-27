@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abu — Profil Diri</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#tentang" class="nav-logo">Abu<span>.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#skill">Skill</a></li>
+      <li><a href="#hobi">Hobi</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn-theme" id="btn-theme" aria-label="Toggle dark mode">🌙</button>
+      <button class="btn-hamburger" id="btn-hamburger" aria-expanded="false" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="hero">
+      <div class="hero-text">
+        <p class="hero-tag">Halo, saya</p>
+        <h1 class="hero-name">Abu</h1>
+        <p class="hero-role">Siswa SMK RPL &amp; Junior Web Developer</p>
+        <p class="hero-bio">
+          Sedang mendalami pengembangan web, baik sisi front-end maupun back-end.
+          Suka ngutak-ngatik hal baru dan pelan-pelan belajar bikin sesuatu yang berguna.
+        </p>
+        <div class="hero-links">
+          <a href="#kontak" class="btn btn-primary">Hubungi Saya</a>
+          <a href="#skill"  class="btn btn-outline">Lihat Skill</a>
+        </div>
+      </div>
+
+      <!-- animasi bunga -->
+      <div class="flower-wrap" aria-hidden="true">
+        <div class="flower">
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="center"></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- SKILL -->
+    <section id="skill" class="section">
+      <h2 class="section-title">Skill</h2>
+      <p class="section-sub">Teknologi yang lagi saya pelajari dan pakai</p>
+
+      <input
+        type="search"
+        id="cari-skill"
+        class="skill-search"
+        placeholder="Cari skill… (misal: php)"
+        autocomplete="off"
+      />
+      <div class="skill-grid" id="skill-list" aria-live="polite"></div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- HOBI -->
+    <section id="hobi" class="section">
+      <h2 class="section-title">Hobi</h2>
+      <p class="section-sub">Hal yang saya suka di luar coding</p>
+
+      <div class="hobi-grid">
+
+        <div class="hobi-card">
+          <span class="hobi-icon">🚲</span>
+          <div class="hobi-title">Bersepeda</div>
+          <p class="hobi-short">Suka gowes sore atau malam kalau lagi santai.</p>
+          <button class="btn-lihat" data-hobi="sepeda">Lihat deskripsi</button>
+        </div>
+
+        <div class="hobi-card">
+          <span class="hobi-icon">📖</span>
+          <div class="hobi-title">Membaca Manhwa</div>
+          <p class="hobi-short">Penggemar komik Korea, terutama yang genre action.</p>
+          <button class="btn-lihat" data-hobi="manhwa">Lihat deskripsi</button>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- KONTAK -->
+    <section id="kontak" class="section">
+      <h2 class="section-title">Kontak</h2>
+      <p class="section-sub">Jangan ragu buat ngobrol atau tanya-tanya</p>
+
+      <ul class="contact-list">
+        <li>
+          <div class="contact-card">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:abu@gmail.com" class="contact-value">abu@gmail.com</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="contact-card">
+            <span class="contact-icon">📱</span>
+            <div>
+              <div class="contact-label">WhatsApp / Telepon</div>
+              <a href="tel:+6281219456393" class="contact-value">0812-1945-6393</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="contact-card">
+            <span class="contact-icon">🦊</span>
+            <div>
+              <div class="contact-label">GitLab</div>
+              <a href="https://gitlab.com/Voxluxc" class="contact-value"
+                 target="_blank" rel="noopener noreferrer">gitlab.com/Voxluxc</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; <span id="tahun"></span> Abu</p>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="back-top" aria-label="Kembali ke atas">↑</button>
+
+  <!-- MODAL HOBI -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title" id="modal-title"></span>
+        <button class="btn-close" id="btn-close" aria-label="Tutup">✕</button>
+      </div>
+      <p class="modal-body" id="modal-body"></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
